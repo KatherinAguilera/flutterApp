@@ -90,7 +90,7 @@ class DescriptionPlace extends StatelessWidget {
     final content_places = Column(
       children: <Widget>[
         title_starts,
-        description
+        description,
       ],
     );
     return content_places;
