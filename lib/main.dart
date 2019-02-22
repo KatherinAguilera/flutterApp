@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'description_place.dart';
 import 'review_list.dart';
 import 'gradient_back.dart';
+import 'header_appbar.dart';
 // import 'package:flutter/services.dart';
 
 void main() => runApp(MyApp());
@@ -18,12 +19,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-     home: Scaffold(
+    home: Scaffold(
         //body: new DescriptionPlace("Bahamas", 4, descriptionDummy),
-        // Stack mostrar lista por debajo del gradient 
         body: Stack(
           children: <Widget>[
-            // generar una lista para que haga scroll
             ListView(
               children: <Widget>[
                 DescriptionPlace("Bahamas", 4, descriptionDummy),
@@ -31,7 +30,7 @@ class MyApp extends StatelessWidget {
 
               ],
             ),
-            GradientBack("Popular")
+            HeaderAppBar()
           ],
         ),
       )//MyHomePage(title: 'Flutter Demo Home Page'),
