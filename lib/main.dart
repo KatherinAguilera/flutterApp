@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
+import 'review_list.dart';
+import 'gradient_back.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -13,18 +15,25 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-      home: Scaffold (
-        appBar: AppBar(
-          title: Center(
-            child: Text("Hola Nav"),
-            )
+     home: Scaffold(
+        //body: new DescriptionPlace("Bahamas", 4, descriptionDummy),
+        body: Stack(
+          children: <Widget>[
+            ListView(
+              children: <Widget>[
+                DescriptionPlace("Bahamas", 4, descriptionDummy),
+                ReviewList()
+
+              ],
+            ),
+            GradientBack()
+          ],
         ),
-        body: new DescriptionPlace("Tokyo JP", 4, descriptionDummy),
-      )
-      //MyHomePage(title: 'Flutter Demo Home Page'),
+      )//MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
+
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
