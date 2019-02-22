@@ -4,13 +4,14 @@ void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+  String descriptionDummy= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting";
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepOrange,
       ),
       home: Scaffold (
         appBar: AppBar(
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
             child: Text("Hola Nav"),
             )
         ),
-        body: new DescriptionPlace(),
+        body: new DescriptionPlace("Tokyo JP", 4, descriptionDummy),
       )
       //MyHomePage(title: 'Flutter Demo Home Page'),
     );
