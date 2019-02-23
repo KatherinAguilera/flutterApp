@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'button_purple.dart';
 class DescriptionPlace extends StatelessWidget {
 
   // Pasar datos dinamicamente mediante un constructor
@@ -88,9 +88,11 @@ class DescriptionPlace extends StatelessWidget {
           ),
         );
     final content_places = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         title_starts,
         description,
+         ButtonPurple("Navigate")
       ],
     );
     return content_places;
