@@ -12,9 +12,10 @@ class FloatingActionButtonGreen extends StatefulWidget {
 
 // Declarando el estado
 class _FloatingActionButtonGreen extends State<FloatingActionButtonGreen> {
+  // cambiar estado de boton vacio a relleno
   bool state= false;
   void onPressedFav(){
-       setState(() {
+     setState(() {
       state = !state;
     });
     Scaffold.of(context).showSnackBar(
