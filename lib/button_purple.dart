@@ -11,6 +11,7 @@ class ButtonPurple extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return InkWell(
+      // comportamiento del boton
       onTap: () {
         Scaffold.of(context).showSnackBar(
             SnackBar(
